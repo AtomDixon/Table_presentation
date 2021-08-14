@@ -1154,7 +1154,7 @@ $(document).ready(function() {
 
 		// ----------------------------------------
 		// MORE JS
-		var dataJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/AtomDixon/Table_presentation/7eda9db924ba78efe1048e255efcec29490fa569/Tatle_optim.data.js'));
+		var dataJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/AtomDixon/Table_presentation/fb7673f7fbcaccafc12541c496d594b67ce388fd/Tatle_optim.data.js'));
 		var utilityJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/AtomDixon/Table_presentation/726f9027efbb6f70f91f4dfe6f6293e6dd4e4a26/Utility.js')).then(addScriptToDom);
 		var dataDownload =
 /* // The following code would download and store the .data file as a Blob, which should be more efficient than loading an ArrayBuffer. However that seems to be buggy, so avoid it for now.

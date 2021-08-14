@@ -1158,18 +1158,18 @@ $(document).ready(function() {
 		var utilityJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/AtomDixon/Table_presentation/9306caeab5f0cf90ee73b12600dd95cfbd9b0dbf/Utility.js')).then(addScriptToDom);
 		var dataDownload =
 /* // The following code would download and store the .data file as a Blob, which should be more efficient than loading an ArrayBuffer. However that seems to be buggy, so avoid it for now.
-			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0')).then(function(dataBlob) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/6v13a1uwk5vbdwy/Tatle_optim.data?dl=0')).then(function(dataBlob) {
 				return readBlobToArrayBuffer(dataBlob).then(function(dataArrayBuffer) {
 					Module['preloadedPackages'] = {};
-					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0')] = dataArrayBuffer;
+					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/6v13a1uwk5vbdwy/Tatle_optim.data?dl=0')] = dataArrayBuffer;
 					return dataJsDownload.then(addScriptToDom);
 				})
 			});
 */
 // Instead as a fallback, download as ArrayBuffer. (TODO: Figure out the bugs with the above, and switch to using that one instead)
-			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0'), 'arraybuffer').then(function(dataArrayBuffer) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/6v13a1uwk5vbdwy/Tatle_optim.data?dl=0'), 'arraybuffer').then(function(dataArrayBuffer) {
 				Module['preloadedPackages'] = {};
-				Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0')] = dataArrayBuffer;
+				Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/6v13a1uwk5vbdwy/Tatle_optim.data?dl=0')] = dataArrayBuffer;
 				return dataJsDownload.then(addScriptToDom);
 			});
 

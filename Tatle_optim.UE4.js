@@ -1161,7 +1161,7 @@ $(document).ready(function() {
 			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0')).then(function(dataBlob) {
 				return readBlobToArrayBuffer(dataBlob).then(function(dataArrayBuffer) {
 					Module['preloadedPackages'] = {};
-					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0)] = dataArrayBuffer;
+					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0')] = dataArrayBuffer;
 					return dataJsDownload.then(addScriptToDom);
 				})
 			});

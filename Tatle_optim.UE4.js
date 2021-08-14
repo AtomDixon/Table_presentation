@@ -1133,7 +1133,7 @@ $(document).ready(function() {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: true };
 			});
 		}).catch(function() {
-			return download(Module.locateFile('https://dl.dropboxusercontent.com/s/83tycvzj4pdjzpg/UE4Game.wasm?dl=0'), 'arraybuffer').then(function(wasmBytes) {
+			return download(Module.locateFile('https://dl.dropboxusercontent.com/s/g8aipzcyn5ubs9b/UE4Game.wasm?dl=0'), 'arraybuffer').then(function(wasmBytes) {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: false };
 			});
 		});
@@ -1158,10 +1158,10 @@ $(document).ready(function() {
 		var utilityJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/AtomDixon/Table_presentation/726f9027efbb6f70f91f4dfe6f6293e6dd4e4a26/Utility.js')).then(addScriptToDom);
 		var dataDownload =
 /* // The following code would download and store the .data file as a Blob, which should be more efficient than loading an ArrayBuffer. However that seems to be buggy, so avoid it for now.
-			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/l693dfen0nwxe3h/Tatle_optim.data?dl=0')).then(function(dataBlob) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0')).then(function(dataBlob) {
 				return readBlobToArrayBuffer(dataBlob).then(function(dataArrayBuffer) {
 					Module['preloadedPackages'] = {};
-					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/l693dfen0nwxe3h/Tatle_optim.data?dl=0')] = dataArrayBuffer;
+					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/r96re42gux7xpfn/Tatle_optim.data?dl=0)] = dataArrayBuffer;
 					return dataJsDownload.then(addScriptToDom);
 				})
 			});
